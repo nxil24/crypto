@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treasure Hunt: Collect Edition</title>
+    <title>Treasure Hunt: Collect and Buy Edition</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🔍 Treasure Hunt: Collect Edition</h1>
-        <p>Explore to discover treasures and collect them!</p>
+        <h1>🔍 Treasure Hunt: Collect and Buy Edition</h1>
+        <p>Explore, discover treasures, and buy items with your earnings!</p>
     </header>
 
     <section id="game-area">
@@ -17,6 +17,18 @@
         <p id="status">Status: Ready to explore!</p>
         <div id="treasure-info"></div>
         <div id="treasure-animation"></div>
+    </section>
+
+    <section id="currency">
+        <h2>Your Coins: <span id="coin-balance">0</span></h2>
+    </section>
+
+    <section id="shop">
+        <h2>🛒 Shop</h2>
+        <div id="shop-items">
+            <!-- Shop items will be added here -->
+        </div>
+        <button id="buy-item-btn" style="display: none;">Buy Selected Item</button>
     </section>
 
     <section id="nft-collection">
