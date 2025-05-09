@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f1f1f1;
+    overflow: hidden;
 }
 
 header {
@@ -23,10 +24,32 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: transform 0.2s ease;
 }
 
 button:hover {
     background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#game-area {
+    position: relative;
+}
+
+#treasure-info {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#treasure-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    display: none;
 }
 
 #nft-list {
@@ -45,8 +68,19 @@ button:hover {
     text-align: center;
 }
 
+.nft-item img {
+    width: 100px;
+    height: 100px;
+}
+
 footer {
     margin-top: 30px;
     font-size: 12px;
     color: #888;
+}
+
+@keyframes treasureFound {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
 }
